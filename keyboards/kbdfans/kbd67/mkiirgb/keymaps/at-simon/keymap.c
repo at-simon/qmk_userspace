@@ -55,7 +55,7 @@ enum custom_user_layers {
 #define TG_RST TG(_RESET)
 
 // Default values
-uint8_t lighting_mode = 3; // default: Rainbow
+uint8_t lighting_mode = 2; // default: Dark, FN -> '/'
 uint8_t hsv_val = 170;
 bool mac_enabled = true;
 
@@ -192,7 +192,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // #ifdef ENABLE_MILKSHAKE
 
 void keyboard_post_init_user(void) {
-    rgb_matrix_mode(RGB_MATRIX_TYPING_HEATMAP); // default for rainbow
+    rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR); // default for rainbow
     // rgb_matrix_mode(RGB_MATRIX_SOLID_COLOR); // default for milkshake
     // rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_cool_effect);
 }

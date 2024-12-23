@@ -197,6 +197,32 @@ void keyboard_post_init_user(void) {
     // rgb_matrix_mode(RGB_MATRIX_CUSTOM_my_cool_effect);
 }
 
+// ------------------------------ OS detection -----------------------------.
+bool process_detected_host_os_user(os_variant_t detected_os) {
+  switch (detected_os) {
+    case OS_MACOS:
+    case OS_IOS:
+      layer_on(_B_MAC);
+      layer_off(_B_WIN);
+      mac_enabled = true;
+      break;
+    case OS_WINDOWS:
+      layer_on(_B_WIN);
+      layer_off(_B_MAC);
+      mac_enabled = false;
+      break;
+    case OS_LINUX:
+      // rgb_matrix_set_color_all(RGB_ORANGE);
+      break;
+    case OS_UNSURE:
+      // rgb_matrix_set_color_all(RGB_RED);
+      break;
+  }
+
+  return false;
+}
+
+
 uint8_t get_lighting_mode(void) {
     return lighting_mode;
 }

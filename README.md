@@ -2,8 +2,13 @@
 
 ## Keyboards
 
+### at-simon
 - [KBD67 Lite R4](keyboards/kbdfans/kbd67/mkiirgb/keymaps/at-simon)
 - [KBDPAD MarK II](keyboards/kbdfans/kbdpad/mk2/keymaps/at-simon)
+
+### splitkb
+- [Default Halcyon Kyria](keyboards/splitkb/halcyon/kyria/keymaps/default_hlc)
+    - Users: [halcyon_modules](users/halcyon_modules)
 
 # Building
 

@@ -9,7 +9,7 @@ qmk compile -kb kbdfans/kbd67/mkiirgb/v3 -km at-simon
 
 
 ## Secret file
-Edit this file [secret_definitions.h](secret_definitions.h):
+Add this file [./secrets.h](./secrets.h):
 ```
 #define LAST_NAME <LAST_NAME>
 #define MAIL <MAIL>

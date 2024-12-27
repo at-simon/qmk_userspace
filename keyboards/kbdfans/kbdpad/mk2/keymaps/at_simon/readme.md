@@ -5,5 +5,5 @@
 ## Compilation
 
 ```bash
-qmk compile -kb kbdfans/kbdpad/mk2 -km at-simon
+qmk compile -kb kbdfans/kbdpad/mk2 -km at_simon
 ```

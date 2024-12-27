@@ -4,7 +4,7 @@ Predefined colors matching the DSA Milkshake keycap set.
 
 ## Compile
 ```bash
-qmk compile -kb kbdfans/kbd67/mkiirgb/v3 -km at-simon
+qmk compile -kb kbdfans/kbd67/mkiirgb/v3 -km at_simon
 ```
 
 

@@ -1,6 +1,6 @@
 # keymap by at-simon
 
-Lighting is adapted for the DSA Milkshake keycap set installed on my keyboard.
+Predefined colors matching the DSA Milkshake keycap set.
 
 ## Compile
 ```bash

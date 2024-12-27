@@ -19,7 +19,7 @@
 #include QMK_KEYBOARD_H
 #include "customizations.h"
 #include "sendstring_us_international.h"
-#include "secret_definitions.h"
+#include "secrets.h"
 
 // Custom Keycodes
 enum custom_user_keycodes {

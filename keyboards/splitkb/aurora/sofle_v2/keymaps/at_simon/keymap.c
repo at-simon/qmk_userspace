@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "gpio.h"
 
 // LAYERS
 enum custom_user_layers {
@@ -125,3 +126,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *             `-----------------------|     |     |     |-----------------------´
  *                                     `-----´     `-----´
  */
+
+
+void keyboard_pre_init_user(void) {
+    // Disabling power led
+    gpio_set_pin_output(24);
+    gpio_write_pin_high(24);
+}
+
+#ifdef RGBLIGHT_ENABLE
+void keyboard_post_init_user(void) {
+  rgblight_enable_noeeprom(); // enables RGB, without saving settings
+  rgblight_sethsv_noeeprom(HSV_GREEN); // sets the color to red without saving
+  rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT); // sets mode to Fast breathing without saving
+}
+
+void housekeeping_task_user(void) {
+    rgblight_setrgb_at(RGB_BLUE, 0);
+    rgblight_setrgb_at(RGB_RED, 1);
+}
+#endif

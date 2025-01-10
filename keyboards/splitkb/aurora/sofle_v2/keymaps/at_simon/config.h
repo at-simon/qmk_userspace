@@ -16,9 +16,27 @@
 
 #pragma once
 
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
-#define RGB_MATRIX_KEYPRESSES
-#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
-#define ENABLE_RGB_MATRIX_SOLID_SPLASH
-#define ENABLE_RGB_MATRIX_RAINBOW_BEACON
-#define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+// not needed rgb effects
+// #define RGB_DISABLE_WHEN_USB_SUSPENDED
+// #define RGB_MATRIX_KEYPRESSES
+// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+// #define ENABLE_RGB_MATRIX_SOLID_SPLASH
+// #define ENABLE_RGB_MATRIX_RAINBOW_BEACON
+// #define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+
+// disabling oled display
+// #undef OLED_ENABLE
+// #define OLED_ENABLE = no
+
+// disabling encoder
+#undef ENCODER_ENABLE
+#define ENCODER_ENABLE = no
+
+// Liatris onboard rgb
+// https://docs.splitkb.com/product-guides/liatris/onboard-rgb
+#undef WS2812_DI_PIN
+#define WS2812_DI_PIN 25
+// #undef RGBLED_NUM
+// #define RGBLED_NUM 2
+#undef RGBLED_SPLIT
+#define RGBLED_SPLIT {1, 1}
